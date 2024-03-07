@@ -46,12 +46,12 @@ Para la configuración basta con lo solicitado en el apartado de instalación ya
 
 ## Estructura de carpetas y Archivos
 La estructura de carpetas y archivos se ha basado en el modelo de JPA:
-* Igu
-* Lógica
+* **Igu**
+* **Lógica**
   - Empleado.java
   - Controladora.java
-* Persistencia
-  * exceptions
+* **Persistencia**
+  * **exceptions**
     - EmpleadoException.java
     - IllegalOrphanException.java
     - NonexistentEntityException.java
@@ -105,13 +105,13 @@ Realiza las operaciones CRUD en la base de datos utilizando JPA (crear, leer, ac
 
 ### Los métodos más importantes a tener en cuenta se encuentran en la clase EmpleadoJpaController.java y todos ellos tienen una función para el tratamiento de la base de datos
 Los métodos que se utilizan para las operaciones CRUD son: 
-* create(), para insertar un registro en la base de datos.
-* edit(), para editar un registro ya existente en la base de datos.
-* findEmpleadoEntities(), se utiliza sólo cuando visualizamos el empleado a editar y el empleado a eliminar pero nos puede servir si quisieramos ver los empleados eliminados, ya que no los filtra.
-* findEmpleado, para conocer el id del empleado a editar.
-* softDeleteEmpleado(), cambia el estado del campo boolean "empleadoBorrar" a true para que cuando se realice la consulta a la base de datos no aparezca.
-* listEmpleadoNoBorrado(), realiza la consulta a la base de datos para devolver únicamente los empleados que tengan el campo "empleadoBorrar" en false.
-* findRoleEmpleado(), realiza la consulta a la base de datos para devolver los empleados cuyo cargo se ha solicitado por teclado.
+* **create()**, para insertar un registro en la base de datos.
+* **edit()**, para editar un registro ya existente en la base de datos.
+* **findEmpleadoEntities()**, se utiliza sólo cuando visualizamos el empleado a editar y el empleado a eliminar pero nos puede servir si quisieramos ver los empleados eliminados, ya que no los filtra.
+* **findEmpleado()**, para conocer el id del empleado a editar.
+* **softDeleteEmpleado()**, cambia el estado del campo boolean "empleadoBorrar" a true para que cuando se realice la consulta a la base de datos no aparezca.
+* **listEmpleadoNoBorrado()**, realiza la consulta a la base de datos para devolver únicamente los empleados que tengan el campo "empleadoBorrar" en false.
+* **findRoleEmpleado()**, realiza la consulta a la base de datos para devolver los empleados cuyo cargo se ha solicitado por teclado.
 
 ## Supuestos
 * Se asume que los datos ingresados por el usuario (nombres, apellidos, cargos, etc.) son válidos y están formateados correctamente.
@@ -123,7 +123,7 @@ Los métodos que se utilizan para las operaciones CRUD son:
 Por el momento no se tiene constancia de ningún problema salvo que en la entrada de datos introduzcamos un tipo de dato erroneo, por ejemplo, cuando pedimos el salario si en vez de un double o un int le pasamos un Strig la aplicación lanzará una excepción que no hemos controlado y se terminará con su ejecución, teniendo que volver a iniciarla para continuar con las pruebas. A medida que vayamos implementando cambios y actualizando versiones pueden surgir problemas si no se testea todo correctamente.
 
 ## Licencia
-Este prouecto pertenece a Iván Arrabé Jiménez.
+Este prouecto pertenece a **Iván Arrabé Jiménez**.
 
 ## Contacto
-Para contactar con el equipo del proyecto enviar un email a [ivanarrabe@gmail.com](mailto:ivanarrabe@gmail.com)
+Para contactar con el equipo del proyecto enviar un email a **[ivanarrabe@gmail.com](mailto:ivanarrabe@gmail.com)**
