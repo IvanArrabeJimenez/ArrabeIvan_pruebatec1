@@ -1,20 +1,3 @@
-# Índice
-
-1. [Documentación de proyecto de Gestión de Empleados con JPA](#Documentación-de-proyecto-de-Gestión-de-Empleados-con-JPA)
-2. [Estado del Proyecto](#estado-del-proyecto)
-3. [Tecnologías Utilizadas](#tecnologías-utilizadas)
-4. [Instalación](#instalación)
-5. [Uso](#uso)
-6. [Configuración](#configuración)
-7. [Estructura de Carpetas y Archivos](#estructura-de-carpetas-y-archivos)
-8. [Contribuciones](#contribuciones)
-9. [Documentación de Métodos y Clases](#documentación-de-métodos-y-clases)
-10. [Supuestos](#supuestos)
-11. [Problemas Conocidos](#problemas-conocidos)
-12. [Licencia](#licencia)
-13. [Contacto](#contacto)
-
-
 # Documentación de proyecto de Gestión de Empleados con JPA
 Mediante esta aplicación podremos gestionar empleados almacenados en una base de datos, implementada con JPA (Java Persistence API). La aplicación proporciona un menú con diversas opciones para interactuar con los datos de los empleados.
 Por el momento, el manejo de la aplicación se reduce a la consola del IDE que estemos utilizando, pero en versiones posteriores se implementará una interfaz gráfica para su manejo más simple e intuitivo.
