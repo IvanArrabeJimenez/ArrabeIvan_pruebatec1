@@ -75,3 +75,55 @@ Método Main:
 ```java
 public static void main(String[] args) throws EmpleadoException {
 ```
+En este método se realiza toda la lógica de la aplicación, tanto la recogida de datos como su envío por medio de métodos a las diferentes capas del modelo siguiendo el orden establecido, así como la vuelta de la información para su posterior visualización.
+Es el método más importante ya que se encarga del tratamiento de toda la información.
+
+### Clase Empleado
+```java
+@Entity
+public class Empleado implements Serializable {
+```
+Clase que representa la entidad Empleado mapeada a la base de datos mediante JPA.
+
+### Clase Controladora
+```java
+public class Controladora {
+```
+Contiene métodos para realizar operaciones CRUD en la base de datos utilizando JPA (crear, leer, actualizar, eliminar). Recibe la información de Pr1Empresa.java y lo envía a ControladoraPersistencia.java
+
+### Clase ControladoraPersistencia
+```java
+public class ControladoraPersistencia {
+```
+Contiene métodos para realizar operaciones CRUD en la base de datos utilizando JPA (crear, leer, actualizar, eliminar). Recibe la información de Controladora.java y lo envía a EmpleadoJpaController.java
+
+### Clase EmpleadoJpaController
+```java
+public class EmpleadoJpaController implements Serializable {
+```
+Realiza las operaciones CRUD en la base de datos utilizando JPA (crear, leer, actualizar, eliminar). Recibe la información de ControladoraPersistencia.java, procesa los datos y, finalmente los devuelve en sentido contrario pasando por las clases hasta llegar a Pt1Empresa.java y mostrar los resultados.
+
+### Los métodos más importantes a tener en cuenta se encuentran en la clase EmpleadoJpaController.java y todos ellos tienen una función para el tratamiento de la base de datos
+Los métodos que se utilizan para las operaciones CRUD son: 
+* create(), para insertar un registro en la base de datos.
+* edit(), para editar un registro ya existente en la base de datos.
+* findEmpleadoEntities(), se utiliza sólo cuando visualizamos el empleado a editar y el empleado a eliminar pero nos puede servir si quisieramos ver los empleados eliminados, ya que no los filtra.
+* findEmpleado, para conocer el id del empleado a editar.
+* softDeleteEmpleado(), cambia el estado del campo boolean "empleadoBorrar" a true para que cuando se realice la consulta a la base de datos no aparezca.
+* listEmpleadoNoBorrado(), realiza la consulta a la base de datos para devolver únicamente los empleados que tengan el campo "empleadoBorrar" en false.
+* findRoleEmpleado(), realiza la consulta a la base de datos para devolver los empleados cuyo cargo se ha solicitado por teclado.
+
+## Supuestos
+* Se asume que los datos ingresados por el usuario (nombres, apellidos, cargos, etc.) son válidos y están formateados correctamente.
+* No se implementa validación exhaustiva de datos de entrada para simplificar el ejemplo.
+* Se asume que el usuario conoce el ID de los empleados y sus roles para que a la hora de hacer las consultas no entre en un bucle infinito en los menús de selección.
+* Se asume que el usuario sabe utilizar el IDE y que sabe como se inicia el programa mediante el método main.
+
+## Problemas conocidos
+Por el momento no se tiene constancia de ningún problema salvo que en la entrada de datos introduzcamos un tipo de dato erroneo, por ejemplo, cuando pedimos el salario si en vez de un double o un int le pasamos un Strig la aplicación lanzará una excepción que no hemos controlado y se terminará con su ejecución, teniendo que volver a iniciarla para continuar con las pruebas. A medida que vayamos implementando cambios y actualizando versiones pueden surgir problemas si no se testea todo correctamente.
+
+## Licencia
+Este prouecto pertenece a Iván Arrabé Jiménez.
+
+## Contacto
+Para contactar con el equipo del proyecto enviar un email a [ivanarrabe@gmail.com](ivanarrabe@gmail.com)
