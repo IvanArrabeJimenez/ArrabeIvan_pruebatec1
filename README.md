@@ -126,4 +126,4 @@ Por el momento no se tiene constancia de ningún problema salvo que en la entrad
 Este prouecto pertenece a Iván Arrabé Jiménez.
 
 ## Contacto
-Para contactar con el equipo del proyecto enviar un email a [ivanarrabe@gmail.com](ivanarrabe@gmail.com)
+Para contactar con el equipo del proyecto enviar un email a [ivanarrabe@gmail.com](mailto:ivanarrabe@gmail.com)
